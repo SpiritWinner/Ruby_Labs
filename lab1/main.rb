@@ -17,10 +17,10 @@ end
 
 def foobar(first_number, second_number)
   if first_number == 20 || second_number == 20
-    #puts "#{second_number}"
+    # puts "#{second_number}"
     second_number
   else
-    #puts "#{first_number + second_number}"
+    # puts "#{first_number + second_number}"
     first_number + second_number
   end
 end
