@@ -21,3 +21,5 @@ def hash_pokemon
   end
   pokemons
 end
+
+

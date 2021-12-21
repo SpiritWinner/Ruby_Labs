@@ -1,0 +1,4 @@
+Student: Akulov Mishail 	age: 19
+Student: Shestakov Andrew 	age: 19
+Student: Bannikova Dasha 	age: 19
+Student: Levchenko Kosta 	age: 19
