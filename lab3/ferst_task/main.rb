@@ -13,3 +13,14 @@ def where(name)
   @actor_id
 end
 
+def update(id, name)
+  file = File.open(BUFFER, 'w')
+  File.foreach(ACTORS_LIST_PATH).with_index do |actor, index|
+    file.puts(id == index ? name : actor)
+  end
+
+  file.close
+  File.write(ACTORS_LIST_PATH, File.read(BUFFER))
+
+  File.delete(BUFFER) if File.exist?(BUFFER)
+end
