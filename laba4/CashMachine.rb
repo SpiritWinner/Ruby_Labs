@@ -7,23 +7,23 @@ class CashMachine
 
   def get_money
     get_balance
-    puts "How much you want to deposit"
+    puts 'How much you want to deposit'
     inserted = gets.to_i
     if inserted > 0
       inserted
     else
-      puts "Wrong number please try again"
+      puts 'Wrong number please try again'
       get_money
     end
   end
 
   def get_value
     get_balance
-    puts "How much money you want to withdraw?"
+    puts 'How much money you want to withdraw?'
     entered = gets.to_i
     if entered > @balance
-      puts "You want to withdraw more than you have"
-      puts "Please try again"
+      puts 'You want to withdraw more than you have'
+      puts 'Please try again'
       get_value
     else
       entered
@@ -41,8 +41,8 @@ class CashMachine
   public
 
   def write_to_file(path)
-    File.write(path, @balance, mode: "w")
-    puts "Good bye"
+    File.write(path, @balance, mode: 'w')
+    puts 'Good bye'
   end
 
   def read_from_keyboard
@@ -70,16 +70,16 @@ end
 
 class App
   def self.init
-    input_path = "./balance.txt"
+    input_path = './balance.txt'
     atm = CashMachine.new(input_path)
-    command = "b"
-    while command != "q"
+    command = 'b'
+    while command != 'q'
       case command
-      when "b"
+      when 'b'
         atm.get_balance
-      when "d"
+      when 'd'
         atm.deposit
-      when "w"
+      when 'w'
         atm.withdraw
       else
         atm.wrong_request
