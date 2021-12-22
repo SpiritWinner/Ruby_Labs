@@ -75,10 +75,10 @@ def main
       balance(money)
     when "d"
       money = deposit(money)
-      when "w"
-        money = withdraw(money)
-        else
-          error
+    when "w"
+      money = withdraw(money)
+    else
+      error
     end
     button = check_balance
   end
